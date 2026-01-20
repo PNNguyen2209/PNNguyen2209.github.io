@@ -146,6 +146,10 @@ a:hover {
   color: var(--muted);
 }
 
+.post {
+  margin-top: 32px;
+}
+
 .post-body {
   margin-top: 18px;
 }
