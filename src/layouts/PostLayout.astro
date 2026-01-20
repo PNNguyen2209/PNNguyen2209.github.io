@@ -1,5 +1,6 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
 
 const { title, pubDate } = Astro.props;
 const dateLabel = pubDate
@@ -11,15 +12,29 @@ const dateLabel = pubDate
   : "";
 ---
 
-<BaseLayout title={title}>
-  <article class="post">
-    <header>
-      <p class="eyebrow">Notes</p>
-      <h1>{title}</h1>
-      {dateLabel && <p class="muted">{dateLabel}</p>}
-    </header>
-    <div class="post-body">
-      <slot />
+<!DOCTYPE html>
+<html>
+  <Header title={`${title} | Nguyen Nguyen`} />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="notes" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/notes" class="back-nav-button w-inline-block"
+              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>{title}</h1>
+            {dateLabel && <div class="mini-label-white">{dateLabel}</div>}
+            <div class="project-desc w-richtext">
+              <slot />
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
-  </article>
-</BaseLayout>
+  </body>
+</html>

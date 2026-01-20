@@ -1,29 +1,64 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Project from "../components/Project.astro";
+import Sidebar from "../components/Sidebar.astro";
+
+const projects = [
+  {
+    title: "Project One",
+    desc: [
+      "Describe the goal, your role, and the outcome.",
+      "Mention a key decision or constraint you navigated.",
+      "Call out a result, metric, or lesson learned."
+    ],
+    tech: ["TypeScript", "React", "Node.js"]
+  },
+  {
+    title: "Project Two",
+    desc: [
+      "Highlight the problem you solved and how.",
+      "Share a design or engineering challenge you tackled.",
+      "Note the impact on users or stakeholders."
+    ],
+    tech: ["Python", "APIs", "PostgreSQL"]
+  },
+  {
+    title: "Project Three",
+    desc: [
+      "Share a result or metric if you have one.",
+      "Summarize collaboration or leadership contributions."
+    ],
+    tech: ["Astro", "CSS", "GitHub Actions"]
+  }
+];
 ---
 
-<BaseLayout title="Projects">
-  <section class="hero">
-    <p class="eyebrow">Selected Work</p>
-    <h1>Projects</h1>
-    <p class="lead">A snapshot of products, experiments, and things I learned building.</p>
-  </section>
-
-  <section class="grid">
-    <div class="card">
-      <h2>Project One</h2>
-      <p class="muted">Web Platform</p>
-      <p>Describe the goal, your role, and the outcome.</p>
+<!DOCTYPE html>
+<html>
+  <Header title="Projects | Nguyen Nguyen" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="projects" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/" class="back-nav-button w-inline-block"
+              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Projects</h1>
+            <section class="items-container">
+              <div class="resouce-items">
+                {projects.map((project) => (
+                  <Project title={project.title} desc={project.desc} tech={project.tech} />
+                ))}
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
     </div>
-    <div class="card">
-      <h2>Project Two</h2>
-      <p class="muted">Developer Tool</p>
-      <p>Highlight the problem you solved and how.</p>
-    </div>
-    <div class="card">
-      <h2>Project Three</h2>
-      <p class="muted">Open Source</p>
-      <p>Share a result or metric if you have one.</p>
-    </div>
-  </section>
-</BaseLayout>
+  </body>
+</html>

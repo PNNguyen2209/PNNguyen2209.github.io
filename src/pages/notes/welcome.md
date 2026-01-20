@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: Welcome to My Notes
+description: A quick note on what to expect from this space.
 pubDate: 2026-01-20
 ---
 

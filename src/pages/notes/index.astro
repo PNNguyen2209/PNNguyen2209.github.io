@@ -1,5 +1,6 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Sidebar from "../../components/Sidebar.astro";
 
 const posts = await Astro.glob("./*.md");
 const sortedPosts = posts.sort((a, b) => {
@@ -9,32 +10,51 @@ const sortedPosts = posts.sort((a, b) => {
 });
 ---
 
-<BaseLayout title="Notes">
-  <section class="hero">
-    <p class="eyebrow">Personal Blog</p>
-    <h1>Notes</h1>
-    <p class="lead">Short-form thoughts, learning notes, and experiments.</p>
-  </section>
-
-  <section class="card">
-    <h2>Latest Posts</h2>
-    <ul>
-      {sortedPosts.map((post) => (
-        <li>
-          <a href={post.url}>{post.frontmatter.title}</a>
-          {post.frontmatter.pubDate && (
-            <span class="muted">
-              {" "}
-              -{" "}
-              {new Date(post.frontmatter.pubDate).toLocaleDateString("en-US", {
-                month: "short",
-                day: "2-digit",
-                year: "numeric"
-              })}
-            </span>
-          )}
-        </li>
-      ))}
-    </ul>
-  </section>
-</BaseLayout>
+<!DOCTYPE html>
+<html>
+  <Header title="Notes | Nguyen Nguyen" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="notes" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/" class="back-nav-button w-inline-block"
+              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Notes</h1>
+            <p class="lead">Short-form thoughts, learning notes, and experiments.</p>
+            <section class="items-container">
+              <div class="resouce-items">
+                {sortedPosts.map((post) => (
+                  <div class="single-item">
+                    <h3>
+                      <a href={post.url}>{post.frontmatter.title}</a>
+                    </h3>
+                    {post.frontmatter.pubDate && (
+                      <div class="mini-label-white">
+                        {new Date(post.frontmatter.pubDate).toLocaleDateString("en-US", {
+                          month: "short",
+                          day: "2-digit",
+                          year: "numeric"
+                        })}
+                      </div>
+                    )}
+                    {post.frontmatter.description && (
+                      <div class="project-desc w-richtext">
+                        <p>{post.frontmatter.description}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

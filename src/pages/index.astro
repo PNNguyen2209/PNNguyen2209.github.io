@@ -1,42 +1,71 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
 ---
 
-<BaseLayout title="Home">
-  <section class="hero">
-    <p class="eyebrow">Personal Site</p>
-    <h1>Hi, I'm Nguyen.</h1>
-    <p class="lead">I build software with a focus on clarity, performance, and the occasional delightful detail.</p>
-    <div class="cta-row">
-      <a class="btn" href="/projects">View Projects</a>
-      <a class="btn ghost" href="#contact">Contact</a>
+<!DOCTYPE html>
+<html>
+  <Header title="Nguyen Nguyen | Home" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="home" />
+      <nav class="main">
+        <div class="container">
+          <main class="fold-content-container">
+            <div class="fold-content">
+              <h1>
+                Hi, I'm Nguyen.<br />
+                I build things that feel focused and fast.
+              </h1>
+              <p class="lead">
+                I'm a developer who enjoys turning complex problems into clear, usable products.
+                My interests include web tooling, developer experience, and scalable frontends.
+              </p>
+            </div>
+            <a href="mailto:hello@example.com" class="button w-button">Contact</a>
+          </main>
+
+          <section class="items-container">
+            <div class="resouce-items">
+              <div class="single-item">
+                <h3>About</h3>
+                <div class="project-desc w-richtext">
+                  <p>
+                    I build software with a focus on clarity, performance, and the occasional delightful detail.
+                    I like products that feel calm, considered, and easy to use.
+                  </p>
+                </div>
+              </div>
+              <div class="single-item">
+                <h3>Skills</h3>
+                <div class="mini-label-white">Technologies &amp; tools</div>
+                <div class="chips-container">
+                  <div class="single-chip">JavaScript</div>
+                  <div class="single-chip">TypeScript</div>
+                  <div class="single-chip">Python</div>
+                  <div class="single-chip">React</div>
+                  <div class="single-chip">Node.js</div>
+                  <div class="single-chip">APIs</div>
+                  <div class="single-chip">CI/CD</div>
+                </div>
+              </div>
+              <div class="single-item">
+                <h3>Contact</h3>
+                <div class="project-desc project-desc-list w-richtext">
+                  <ul role="list">
+                    <li>
+                      Email: <a href="mailto:hello@example.com">hello@example.com</a>
+                    </li>
+                    <li>
+                      GitHub: <a href="https://github.com/PNNguyen2209">github.com/PNNguyen2209</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </nav>
     </div>
-  </section>
-
-  <section id="about" class="card">
-    <h2>About</h2>
-    <p>
-      I'm a developer who enjoys turning complex problems into focused, usable products.
-      My interests include web tooling, developer experience, and scalable frontends.
-    </p>
-  </section>
-
-  <section id="skills" class="card">
-    <h2>Skills</h2>
-    <ul class="tag-list">
-      <li>JavaScript</li>
-      <li>TypeScript</li>
-      <li>Python</li>
-      <li>React</li>
-      <li>Node.js</li>
-      <li>APIs</li>
-      <li>CI/CD</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="card">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/PNNguyen2209">github.com/PNNguyen2209</a></p>
-  </section>
-</BaseLayout>
+  </body>
+</html>

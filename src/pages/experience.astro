@@ -1,32 +1,55 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Project from "../components/Project.astro";
+import Sidebar from "../components/Sidebar.astro";
+
+const experiences = [
+  {
+    title: "Role Title - Company (2022 - Present)",
+    desc: [
+      "Summarize what you are responsible for and the outcomes you deliver.",
+      "Highlight a project, a system, or a team you led.",
+      "Share a measurable impact or key result."
+    ],
+    tech: ["Product Strategy", "System Design", "Mentorship"]
+  },
+  {
+    title: "Role Title - Company (2020 - 2022)",
+    desc: [
+      "Give context on this role and any notable accomplishments.",
+      "Call out a process improvement or delivery milestone."
+    ],
+    tech: ["Automation", "Frontend", "Backend"]
+  }
+];
 ---
 
-<BaseLayout title="Experience">
-  <section class="hero">
-    <p class="eyebrow">Timeline</p>
-    <h1>Experience</h1>
-    <p class="lead">Roles, responsibilities, and impact across teams.</p>
-  </section>
-
-  <section class="card">
-    <h2>Role Title - Company</h2>
-    <p class="muted">2022 - Present</p>
-    <p>Summarize what you are responsible for and the kind of outcomes you deliver.</p>
-    <ul>
-      <li>Achievement or metric-driven result.</li>
-      <li>Leadership or collaboration highlight.</li>
-      <li>Technical focus area.</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>Role Title - Company</h2>
-    <p class="muted">2020 - 2022</p>
-    <p>Give context on this role and any notable accomplishments.</p>
-    <ul>
-      <li>Process or system improvement.</li>
-      <li>Key project delivery.</li>
-    </ul>
-  </section>
-</BaseLayout>
+<!DOCTYPE html>
+<html>
+  <Header title="Experience | Nguyen Nguyen" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="experience" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/" class="back-nav-button w-inline-block"
+              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Experience</h1>
+            <section class="items-container">
+              <div class="resouce-items">
+                {experiences.map((item) => (
+                  <Project title={item.title} desc={item.desc} tech={item.tech} />
+                ))}
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
