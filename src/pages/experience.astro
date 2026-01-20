@@ -5,28 +5,36 @@ import Sidebar from "../components/Sidebar.astro";
 
 const experiences = [
   {
-    title: "Role Title - Company (2022 - Present)",
+    title: "AI Engineer Intern - Delft Imaging (May 2025 - Dec 2025)",
     desc: [
-      "Summarize what you are responsible for and the outcomes you deliver.",
-      "Highlight a project, a system, or a team you led.",
-      "Share a measurable impact or key result."
+      "Designed a distributed ML pipeline for medical image analysis, reducing communication and computation by up to 40%.",
+      "Applied model optimization to achieve 3x faster CPU inference on edge devices."
     ],
-    tech: ["Product Strategy", "System Design", "Mentorship"]
+    tech: ["PyTorch", "W&B", "ONNX", "Prometheus", "Docker", "Linux", "Python"]
   },
   {
-    title: "Role Title - Company (2020 - 2022)",
+    title: "Junior Data Engineer (Part-time) - Greencaravan (Dec 2023 - Dec 2025)",
     desc: [
-      "Give context on this role and any notable accomplishments.",
-      "Call out a process improvement or delivery milestone."
+      "Automated cloud infrastructure deployment with IaC to reduce manual setup effort.",
+      "Built serverless APIs to integrate EV charging data for downstream analytics and optimization.",
+      "Developed a KPI analytics pipeline for real-time user health monitoring."
     ],
-    tech: ["Automation", "Frontend", "Backend"]
+    tech: ["AWS CDK", "Lambda", "API Gateway", "EventBridge", "MySQL", "InfluxDB", "Grafana"]
+  },
+  {
+    title: "Software Engineering Intern - ASML (Feb 2023 - Jun 2023)",
+    desc: [
+      "Built a full-stack monitoring app to ingest, store, and visualize KPIs in real time.",
+      "Reduced manual monitoring time by up to 70%."
+    ],
+    tech: ["FastAPI", "InfluxDB", "Grafana", "Docker", "Linux", "Python"]
   }
 ];
 ---
 
 <!DOCTYPE html>
 <html>
-  <Header title="Experience | Nguyen Nguyen" />
+  <Header title="Experience | Phuong Nam Nguyen" />
   <body>
     <div class="content">
       <Sidebar selectedItem="experience" />

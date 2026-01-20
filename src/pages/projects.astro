@@ -5,37 +5,35 @@ import Sidebar from "../components/Sidebar.astro";
 
 const projects = [
   {
-    title: "Project One",
+    title: "Multilevel Audio Reconstruction with INRs",
     desc: [
-      "Describe the goal, your role, and the outcome.",
-      "Mention a key decision or constraint you navigated.",
-      "Call out a result, metric, or lesson learned."
+      "Developed a multiscale encoder-decoder using Implicit Neural Representations for high-fidelity audio reconstruction.",
+      "Benchmarked on public datasets with strong objective metrics (MSE 0.012, MAE 0.068)."
     ],
-    tech: ["TypeScript", "React", "Node.js"]
+    tech: ["PyTorch", "Signal Processing", "Slurm"]
   },
   {
-    title: "Project Two",
+    title: "QuickSilver Graph Database Optimization",
     desc: [
-      "Highlight the problem you solved and how.",
-      "Share a design or engineering challenge you tackled.",
-      "Note the impact on users or stakeholders."
+      "Designed performance-critical algorithms for large-scale graph processing to reduce query latency.",
+      "Improved estimation, caching, and algorithmic design to cut compute and memory overhead by up to 50%."
     ],
-    tech: ["Python", "APIs", "PostgreSQL"]
+    tech: ["C++", "Optimization", "Graph Processing"]
   },
   {
-    title: "Project Three",
+    title: "RAGTravel Recommendation Map",
     desc: [
-      "Share a result or metric if you have one.",
-      "Summarize collaboration or leadership contributions."
+      "Built an LLM-powered recommendation backend for city travel suggestions using RAG.",
+      "Implemented semantic search with FAISS and LLM-based ranking over Google Maps metadata."
     ],
-    tech: ["Astro", "CSS", "GitHub Actions"]
+    tech: ["Python", "FastAPI", "LangChain", "FAISS"]
   }
 ];
 ---
 
 <!DOCTYPE html>
 <html>
-  <Header title="Projects | Nguyen Nguyen" />
+  <Header title="Projects | Phuong Nam Nguyen" />
   <body>
     <div class="content">
       <Sidebar selectedItem="projects" />
