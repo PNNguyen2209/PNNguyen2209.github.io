@@ -1,0 +1,11 @@
+title: Nguyen Nguyen
+email: hello@example.com
+description: >-
+  Personal website for Nguyen Nguyen, featuring projects, experience, and notes.
+baseurl: ""
+url: ""
+markdown: kramdown
+permalink: /blog/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

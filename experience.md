@@ -1,0 +1,31 @@
+---
+layout: default
+title: Experience
+---
+
+<section class="hero">
+  <p class="eyebrow">Timeline</p>
+  <h1>Experience</h1>
+  <p class="lead">Roles, responsibilities, and impact across teams.</p>
+</section>
+
+<section class="card">
+  <h2>Role Title — Company</h2>
+  <p class="muted">2022 — Present</p>
+  <p>Summarize what you are responsible for and the kind of outcomes you deliver.</p>
+  <ul>
+    <li>Achievement or metric-driven result.</li>
+    <li>Leadership or collaboration highlight.</li>
+    <li>Technical focus area.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Role Title — Company</h2>
+  <p class="muted">2020 — 2022</p>
+  <p>Give context on this role and any notable accomplishments.</p>
+  <ul>
+    <li>Process or system improvement.</li>
+    <li>Key project delivery.</li>
+  </ul>
+</section>
