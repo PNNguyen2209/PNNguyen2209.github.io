@@ -19,11 +19,15 @@ section {
 
 a {
   background-color: rgba(0, 0, 0, 0);
+  color: #d6d6d6;
+  text-decoration: none;
 }
 
 a:active,
 a:hover {
   outline: 0;
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 h1 {
@@ -387,6 +391,8 @@ p {
 
 .mini-label-white.gray-color {
   color: #a8a8a8;
+  font-size: 9px;
+  letter-spacing: 0.9px;
 }
 
 .chips-container {

@@ -5,7 +5,8 @@ import Sidebar from "../components/Sidebar.astro";
 
 const experiences = [
   {
-    title: "AI Engineer Intern - Delft Imaging (May 2025 - Dec 2025)",
+    title: "AI Engineer Intern - Delft Imaging",
+    date: "May 2025 - Dec 2025",
     desc: [
       "Designed a distributed ML pipeline for medical image analysis, reducing communication and computation by up to 40%.",
       "Applied model optimization to achieve 3x faster CPU inference on edge devices."
@@ -13,7 +14,8 @@ const experiences = [
     tech: ["PyTorch", "W&B", "ONNX", "Prometheus", "Docker", "Linux", "Python"]
   },
   {
-    title: "Junior Data Engineer (Part-time) - Greencaravan (Dec 2023 - Dec 2025)",
+    title: "Junior Data Engineer (Part-time) - Greencaravan",
+    date: "Dec 2023 - Dec 2025",
     desc: [
       "Automated cloud infrastructure deployment with IaC to reduce manual setup effort.",
       "Built serverless APIs to integrate EV charging data for downstream analytics and optimization.",
@@ -22,7 +24,8 @@ const experiences = [
     tech: ["AWS CDK", "Lambda", "API Gateway", "EventBridge", "MySQL", "InfluxDB", "Grafana"]
   },
   {
-    title: "Software Engineering Intern - ASML (Feb 2023 - Jun 2023)",
+    title: "Software Engineering Intern - ASML",
+    date: "Feb 2023 - Jun 2023",
     desc: [
       "Built a full-stack monitoring app to ingest, store, and visualize KPIs in real time.",
       "Reduced manual monitoring time by up to 70%."
@@ -34,7 +37,7 @@ const experiences = [
 
 <!DOCTYPE html>
 <html>
-  <Header title="Experience | Phuong Nam Nguyen" />
+  <Header title="Experience | Nam" />
   <body>
     <div class="content">
       <Sidebar selectedItem="experience" />
@@ -51,7 +54,7 @@ const experiences = [
             <section class="items-container">
               <div class="resouce-items">
                 {experiences.map((item) => (
-                  <Project title={item.title} desc={item.desc} tech={item.tech} />
+                  <Project title={item.title} date={item.date} desc={item.desc} tech={item.tech} />
                 ))}
               </div>
             </section>
