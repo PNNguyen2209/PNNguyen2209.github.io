@@ -374,6 +374,18 @@ p {
   box-shadow: 0 2px 4px rgba(8, 8, 8, 0.82);
 }
 
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.ghost-button {
+  background-color: transparent;
+  border-color: #4a4a4a;
+}
+
 .fold-content {
   margin-bottom: 48px;
 }
@@ -402,6 +414,32 @@ p {
   font-size: 11px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.education-degree {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.education-meta {
+  color: #a8a8a8;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.education-note {
+  color: #a8a8a8;
+  margin-top: 6px;
 }
 
 .chips-container {

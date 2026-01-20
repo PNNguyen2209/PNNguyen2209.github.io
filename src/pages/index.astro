@@ -21,7 +21,10 @@ import Sidebar from "../components/Sidebar.astro";
                 across healthcare, sustainability, and industrial domains.
               </p>
             </div>
-            <a href="mailto:namiknguyen1234@gmail.com" class="button w-button">Contact</a>
+            <div class="hero-cta">
+              <a href="mailto:namiknguyen1234@gmail.com" class="button w-button">Contact</a>
+              <a href="/assets/Nam_Nguyen_CV.pdf" class="button w-button ghost-button" download>Download CV</a>
+            </div>
           </main>
 
           <section class="items-container">
@@ -72,14 +75,24 @@ import Sidebar from "../components/Sidebar.astro";
               </div>
               <div class="single-item">
                 <h3>Education</h3>
-                <div class="project-desc w-richtext">
-                  <p>
-                    MSc in Data Science and Artificial Intelligence, Eindhoven University of Technology
-                    (Deep Learning, Computer Vision, Generative AI).
-                  </p>
-                  <p>
-                    BSc in Artificial Intelligence (Cum Laude), University of Groningen.
-                  </p>
+                <div class="education-list">
+                  <div class="education-item">
+                    <div class="education-degree">MSc in Data Science and Artificial Intelligence</div>
+                    <div class="education-meta">
+                      Eindhoven University of Technology · 2023 - 2025
+                    </div>
+                    <p class="education-note">
+                      Focus: Deep Learning, Computer Vision, Generative AI. Thesis on distributed ML for medical image
+                      analysis under real-world compute constraints.
+                    </p>
+                  </div>
+                  <div class="education-item">
+                    <div class="education-degree">BSc in Artificial Intelligence (Cum Laude)</div>
+                    <div class="education-meta">University of Groningen · 2020 - 2023</div>
+                    <p class="education-note">
+                      Teaching assistant. Thesis on end-to-end medical image classification using deep learning.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
